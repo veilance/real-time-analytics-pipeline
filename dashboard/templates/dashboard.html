@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Stock Analytics</title>
+    <meta http-equiv="refresh" content="5">
+    <style>
+        table { border-collapse: collapse; width: 100%; font-size: 14px; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+        th { background: #eee; }
+    </style>
+</head>
+<body>
+
+<h2>Live Stock Analytics (Auto-refresh every 5s)</h2>
+
+<table>
+    <tr>
+        <th>Symbol</th>
+        <th>Window Start</th>
+        <th>Window End</th>
+        <th>Avg Price</th>
+        <th>Max Price</th>
+        <th>Min Price</th>
+    </tr>
+    {% for row in rows %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[5] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
