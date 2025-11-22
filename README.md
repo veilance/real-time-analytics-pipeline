@@ -54,7 +54,12 @@ Personal practice project to build a real-time stock analytics pipeline.
         |   Dashboard    |
         | (Flask) |
         +----------------+
+```
+In short, the Stock Producer (using Kafka) is looking for updates from the stock market api every 60 seconds for these top tech stock symbols ('AAPL', 'MSFT', 'GOOGL', 'TSLA', 'AMZN', 'META', 'NVDA', 'NFLX'), the rate limit being 60 api calls per second and max 30 api calls a second.
 
+These stock updates are then streamed as topics that are then consumed via the Apache Spark application (spark_streaming_app.py). This Spark app is tapping into the kafka stream and aggregating the stock market results into metrics that are saved into a PSQL database for persistent storage.
+
+A light-weight frontend using flask is then taking this saved aggregated stock market data and polling the database for new entries to get a live feed of persisted stock market metrics.
 
 ## Technology Used
 Full-Stack Python and Apache Kafka, Apache Spark, and Finnhub for stock market data.
