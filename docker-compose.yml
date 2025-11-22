@@ -34,19 +34,5 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
-  spark-streaming:
-    build: ./spark
-    command: ["python", "spark_streaming_app.py"]
-    depends_on:
-      - kafka
-      - postgres
-
-  dashboard:
-    build: ./dashboard
-    ports:
-      - "5001:5001"
-    depends_on:
-      - postgres
-
 volumes:
   pgdata:

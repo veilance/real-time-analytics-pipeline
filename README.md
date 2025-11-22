@@ -11,10 +11,11 @@ Personal practice project to build a real-time stock analytics pipeline using **
 1. Run `source venv/bin/activate` in terminal (to start with a virtial env for python)
 2. Run `pip install -r requirements.txt` to install the required libraries
 3. Copy the `.env.example` file into a `.env` file and add your finnhub api key (you will have to create a new key), and your psql database credentials
-4. You will have to create a database with a table called stock_aggregates
-5. Run `brew install openjdk@11` to install the java sdk (required for Spark)
-6. Once your database is ready and your stock_aggregates table is ready run the three files in separated terminals `python kafka_stock_producer.py` first, and then `python spark_streaming_app.py` in another terminal
-7. Finally run `source venv/bin/activate`, `pip install -r requirements.txt` and `python app.py` for dashboard frontend in a third terminal
+4. Run `brew install openjdk@11` to install the java sdk (required for Spark)
+5. Run `docker compose up` to start zookeeper, kafka, and postgresql
+6. You will have to create a database with a table called stock_aggregates (incoming supabase soon)
+7. Once your database is ready and your stock_aggregates table is ready run the three files in separated terminals `python kafka_stock_producer.py` first, and then `python spark_streaming_app.py` in another terminal
+8. Finally run `source venv/bin/activate`, `pip install -r requirements.txt` and `python app.py` for dashboard frontend in a third terminal
 
 ## Flow Diagram
 
