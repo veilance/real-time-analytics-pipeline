@@ -1,3 +1,0 @@
-pyspark
-psycopg2-binary
-kafka-python
