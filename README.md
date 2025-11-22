@@ -16,5 +16,45 @@ Personal practice project to build a real-time stock analytics pipeline.
 6. Once your database is ready and your stock_aggregates table is ready run the three files in separated terminals `python kafka_stock_producer.py` first, and then `python spark_streaming_app.py` in another terminal
 7. Finally run `source venv/bin/activate`, `pip install -r requirements.txt` and `python app.py` for dashboard frontend in a third terminal
 
+## Flow Diagram
+
+```text
+        +-----------------+
+        | Stock Producer  |
+        | (kafka_stock_   |
+        |  producer.py)   |
+        +--------+--------+
+                 |
+                 v
+        +-----------------+
+        |      Kafka      |
+        | (stock-market-  |
+        |  data topic)    |
+        +--------+--------+
+                 |
+                 v
+        +-------------------------+
+        |     Spark Streaming     |
+        | (spark_streaming_app.py)|
+        +-----+-----------+------+
+              |           |
+              |           v
+              |    +----------------+
+              |    | Console Output |
+              |    | (debug/logs)   |
+              |    +----------------+
+              v
+        +----------------+
+        |   Postgres     |
+        |  (stocks DB)   |
+        +--------+-------+
+                 |
+                 v
+        +----------------+
+        |   Dashboard    |
+        | (Flask) |
+        +----------------+
+
+
 ## Technology Used
 Full-Stack Python and Apache Kafka, Apache Spark, and Finnhub for stock market data.
