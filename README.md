@@ -52,7 +52,7 @@ Personal practice project to build a real-time stock analytics pipeline.
                  v
         +----------------+
         |   Dashboard    |
-        | (Flask) |
+        | (Flask)
         +----------------+
 ```
 In short, the Stock Producer (using Kafka) is looking for updates from the stock market api every 60 seconds for these top tech stock symbols ('AAPL', 'MSFT', 'GOOGL', 'TSLA', 'AMZN', 'META', 'NVDA', 'NFLX'), the rate limit being 60 api calls per second and max 30 api calls a second.
