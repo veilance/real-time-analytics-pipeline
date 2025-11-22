@@ -4,7 +4,7 @@ https://github.com/user-attachments/assets/b200229b-f8b4-405b-996e-276f12cbc150
 
 ## Purpose
 
-Personal practice project to build a real-time stock analytics pipeline using Full-Stack Python and Apache Kafka, Apache Spark, and Finnhub for stock market data.
+Personal practice project to build a real-time stock analytics pipeline using **Full-Stack Python** and **Apache Kafka**, **Apache Spark**, and **Finnhub for stock market data**.
 
 ## Getting Started
 
