@@ -4,7 +4,7 @@ https://github.com/user-attachments/assets/b200229b-f8b4-405b-996e-276f12cbc150
 
 ## Purpose
 
-Personal practice project to build a real-time stock analytics pipeline.
+Personal practice project to build a real-time stock analytics pipeline using Full-Stack Python and Apache Kafka, Apache Spark, and Finnhub for stock market data.
 
 ## Getting Started
 
@@ -60,6 +60,3 @@ In short, the Stock Producer (using Kafka) is looking for updates from the stock
 These stock updates are then streamed as topics that are then consumed via the Apache Spark application (spark_streaming_app.py). This Spark app is tapping into the kafka stream and aggregating the stock market results into metrics that are saved into a PSQL database for persistent storage.
 
 A light-weight frontend using flask is then taking this saved aggregated stock market data and polling the database for new entries to get a live feed of persisted stock market metrics.
-
-## Technology Used
-Full-Stack Python and Apache Kafka, Apache Spark, and Finnhub for stock market data.
