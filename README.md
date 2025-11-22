@@ -1,5 +1,3 @@
-# real-time-analytics-pipeline
-
 ## Real Time Stock Analytics Pipeline Demo
 
 https://github.com/user-attachments/assets/b200229b-f8b4-405b-996e-276f12cbc150
